@@ -90,14 +90,7 @@
         <url-pattern>/troubleshooting</url-pattern>
     </servlet-mapping>
     
-    <servlet>
-        <servlet-name>HostStatusServlet</servlet-name>
-        <servlet-class>com.company.controller.HostStatusServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HostStatusServlet</servlet-name>
-        <url-pattern>/hostStatus</url-pattern>
-    </servlet-mapping>
+
     
     <servlet>
         <servlet-name>CommentServlet</servlet-name>

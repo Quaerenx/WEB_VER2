@@ -13,7 +13,6 @@ import com.company.model.TroubleshootingDTO;
 import com.company.model.UserDTO;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

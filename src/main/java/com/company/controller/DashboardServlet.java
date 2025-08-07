@@ -6,12 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.company.model.HostStatusDAO;
-import com.company.model.HostStatusDTO;
 import com.company.model.UserDTO;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -35,11 +32,6 @@ public class DashboardServlet extends HttpServlet {
         UserDTO user = (UserDTO) session.getAttribute("user");
         request.setAttribute("user", user);
 
-        // 호스트 상태 정보 가져오기
-        HostStatusDAO hostDAO = new HostStatusDAO();
-        List<HostStatusDTO> hostStatusList = hostDAO.getAllHostStatus();
-        request.setAttribute("hostStatusList", hostStatusList);
-
         // 대시보드 메뉴 구성 정보 설정 (카테고리별)
         Map<String, List<MenuItem>> dashboardMenus = new HashMap<>();
 
@@ -55,11 +47,6 @@ public class DashboardServlet extends HttpServlet {
         customerMenus.add(new MenuItem("고객사 정보", "customers?view=list", "fas fa-address-card"));
         customerMenus.add(new MenuItem("정기점검 이력", "maintenance", "fas fa-clipboard-check"));
         dashboardMenus.put("고객관리", customerMenus);
-
-        // 유틸리티 메뉴 추가
-        List<MenuItem> utilityMenus = new ArrayList<>();
-        utilityMenus.add(new MenuItem("호스트 스캔", "networkScan.jsp", "fas fa-network-wired"));
-        dashboardMenus.put("유틸리티", utilityMenus);
 
         // 대시보드 메뉴 구성 정보를 request에 설정
         request.setAttribute("dashboardMenus", dashboardMenus);
