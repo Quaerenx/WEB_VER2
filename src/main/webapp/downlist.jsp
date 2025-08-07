@@ -455,10 +455,10 @@
                         } else {
                     %>
                     <tr>
-                        <td colspan="5" style="text-align: center; padding: 40px; color: #6c757d;">
+                        <td colspan="5" class="text-center p-5 text-muted">
                             📭 이 폴더는 비어 있습니다.
                             <br><br>
-                            <a href="upload.jsp?path=<%= relativePath %>" style="color: #007bff; text-decoration: none;">
+                            <a href="upload.jsp?path=<%= relativePath %>" class="text-primary text-decoration-none">
                                 📤 첫 번째 파일을 업로드해보세요
                             </a>
                         </td>

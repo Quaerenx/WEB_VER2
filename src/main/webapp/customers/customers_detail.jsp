@@ -434,7 +434,7 @@
                         <span class="detail-value">${not empty customerDetail.customResourcePoolYn ? customerDetail.customResourcePoolYn : '-'}</span>
                     </div>
                 </div>
-                <div class="detail-item full-width" style="margin-top: 1rem;">
+                <div class="detail-item full-width mt-4">
                     <span class="detail-label">백업비고</span>
                     <div class="detail-value note-content">${not empty customerDetail.backupNote ? customerDetail.backupNote : '-'}</div>
                 </div>
@@ -563,7 +563,7 @@
                         <span class="detail-value">${not empty customerDetail.customerType ? customerDetail.customerType : '-'}</span>
                     </div>
                 </div>
-                <div class="detail-item full-width" style="margin-top: 1rem;">
+                <div class="detail-item full-width mt-4">
                     <span class="detail-label">비고</span>
                     <div class="detail-value note-content">${not empty customerDetail.note ? customerDetail.note : '-'}</div>
                 </div>
@@ -574,14 +574,14 @@
     <!-- 상세정보가 없지만 기본 정보가 있는 경우 -->
     <c:if test="${empty customerDetail and not empty customer}">
         <div class="detail-container">
-            <div class="detail-section" style="text-align: center; padding: 4rem;">
-                <i class="fas fa-info-circle" style="font-size: 3rem; color: #f59e0b; margin-bottom: 1rem;"></i>
-                <h3 style="color: #374151; margin-bottom: 1rem;">상세정보가 등록되지 않았습니다</h3>
-                <p style="color: #6b7280; margin-bottom: 2rem;">
+            <div class="detail-section text-center p-5">
+                <i class="fas fa-info-circle text-warning" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3 class="text-dark mb-3">상세정보가 등록되지 않았습니다</h3>
+                <p class="text-muted mb-4">
                     ${customer.customerName}의 기본 정보는 있지만 상세정보가 등록되지 않았습니다.<br>
                     상세정보를 등록하려면 수정 페이지에서 추가해 주세요.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
+                <div class="d-flex gap-3 justify-content-center">
                     <a href="${pageContext.request.contextPath}/customers?view=list" class="btn btn-secondary">
                         <i class="fas fa-arrow-left"></i>
                         목록으로 돌아가기
@@ -598,10 +598,10 @@
     <!-- 고객사 정보가 전혀 없는 경우 -->
     <c:if test="${empty customer and empty customerDetail}">
         <div class="detail-container">
-            <div class="detail-section" style="text-align: center; padding: 4rem;">
-                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #ef4444; margin-bottom: 1rem;"></i>
-                <h3 style="color: #374151; margin-bottom: 1rem;">고객사 정보를 찾을 수 없습니다</h3>
-                <p style="color: #6b7280; margin-bottom: 2rem;">요청하신 고객사 정보가 존재하지 않거나 삭제되었을 수 있습니다.</p>
+            <div class="detail-section text-center p-5">
+                <i class="fas fa-exclamation-triangle text-danger" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3 class="text-dark mb-3">고객사 정보를 찾을 수 없습니다</h3>
+                <p class="text-muted mb-4">요청하신 고객사 정보가 존재하지 않거나 삭제되었을 수 있습니다.</p>
                 <a href="${pageContext.request.contextPath}/customers?view=list" class="btn btn-primary">
                     <i class="fas fa-arrow-left"></i>
                     목록으로 돌아가기

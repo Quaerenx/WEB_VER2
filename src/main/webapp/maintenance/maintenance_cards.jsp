@@ -379,7 +379,7 @@
                                 </div>
                                 
                                 <div class="card-footer">
-                                    <div style="font-size: 0.75rem; color: #9ca3af;">
+                                    <div class="text-muted" style="font-size: 0.75rem;">
                                         클릭하여 점검 이력 보기
                                     </div>
                                     <div class="view-history-btn">

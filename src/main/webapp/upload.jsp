@@ -391,7 +391,7 @@
                 <input type="hidden" name="path" value="<%= relativePath %>">
                 
                 <div class="upload-form" id="uploadArea">
-                    <div style="font-size: 48px; color: #007bff; margin-bottom: 20px;">📁</div>
+                    <div class="text-primary mb-3" style="font-size: 48px;">📁</div>
                     <h4>파일을 여기에 드래그하거나</h4>
                     <div class="file-input">
                         <label for="fileInput">
@@ -403,7 +403,7 @@
                 </div>
 
                 <!-- 선택된 파일 목록 -->
-                <div id="selectedFiles" class="selected-files" style="display: none;">
+                <div id="selectedFiles" class="selected-files d-none">
                     <h5>선택된 파일 목록</h5>
                     <div id="fileList"></div>
                 </div>

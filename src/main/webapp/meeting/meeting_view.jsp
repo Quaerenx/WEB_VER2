@@ -630,7 +630,7 @@
 </div>
 
 <!-- 삭제 확인 폼 (숨김) -->
-<form id="deleteForm" method="post" action="${pageContext.request.contextPath}/meeting" style="display: none;">
+<form id="deleteForm" method="post" action="${pageContext.request.contextPath}/meeting" class="d-none">
     <input type="hidden" name="action" value="delete">
     <input type="hidden" name="meeting_id" value="${meeting.meetingId}">
 </form>
@@ -688,8 +688,8 @@ function editComment(commentId) {
     const contentDiv = document.getElementById('content-' + commentId);
     const editForm = document.getElementById('edit-form-' + commentId);
     
-    contentDiv.style.display = 'none';
-    editForm.style.display = 'block';
+    contentDiv.classList.add('d-none');
+    editForm.classList.remove('d-none');
     
     // 텍스트 영역에 포커스
     document.getElementById('edit-content-' + commentId).focus();
@@ -700,8 +700,8 @@ function cancelEdit(commentId) {
     const contentDiv = document.getElementById('content-' + commentId);
     const editForm = document.getElementById('edit-form-' + commentId);
     
-    contentDiv.style.display = 'block';
-    editForm.style.display = 'none';
+    contentDiv.classList.remove('d-none');
+    editForm.classList.add('d-none');
 }
 
 // 댓글 수정 저장

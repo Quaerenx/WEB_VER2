@@ -549,11 +549,11 @@
                     <c:choose>
                         <c:when test="${filter == 'maintenance'}">
                             정기점검 고객사: <strong>${currentCount}</strong>개 
-                            <span style="color: #9ca3af;">(전체: ${totalCount}개)</span>
+                            <span class="text-muted">(전체: ${totalCount}개)</span>
                         </c:when>
                         <c:otherwise>
                             전체 고객사: <strong>${currentCount}</strong>개 
-                            <span style="color: #9ca3af;">(정기점검: ${maintenanceCount}개)</span>
+                            <span class="text-muted">(정기점검: ${maintenanceCount}개)</span>
                         </c:otherwise>
                     </c:choose>
                 </p>
@@ -742,7 +742,7 @@
             </table>
             
             <!-- 검색 결과 없음 메시지 -->
-            <div id="no-results" class="no-results" style="display: none;">
+            <div id="no-results" class="no-results d-none">
                 <i class="fas fa-search"></i>
                 <h3>검색 결과가 없습니다</h3>
                 <p>다른 검색어로 다시 시도해보세요.</p>
@@ -818,9 +818,9 @@
             
             // Clear 버튼 표시/숨김
             if (searchTerm) {
-                clearButton.style.display = 'block';
+                clearButton.classList.remove('d-none');
             } else {
-                clearButton.style.display = 'none';
+                clearButton.classList.add('d-none');
             }
         });
         
@@ -829,7 +829,7 @@
             searchInput.value = '';
             searchInput.focus();
             performSearch('');
-            this.style.display = 'none';
+            this.classList.add('d-none');
         });
         
         // Enter 키 처리
@@ -874,11 +874,11 @@
             // 검색 결과 없음 메시지 표시/숨김
             if (totalCount > 0) {
                 if (visibleCount === 0 && searchTerm) {
-                    noResultsDiv.style.display = 'block';
-                    if (emptyState) emptyState.style.display = 'none';
+                    noResultsDiv.classList.remove('d-none');
+                    if (emptyState) emptyState.classList.add('d-none');
                 } else {
-                    noResultsDiv.style.display = 'none';
-                    if (emptyState && visibleCount > 0) emptyState.style.display = 'none';
+                    noResultsDiv.classList.add('d-none');
+                    if (emptyState && visibleCount > 0) emptyState.classList.add('d-none');
                 }
             }
         }

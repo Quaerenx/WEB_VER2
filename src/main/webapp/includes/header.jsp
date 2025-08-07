@@ -7,6 +7,10 @@
     <title>${pageTitle} - 게시판 시스템</title>
     <!-- 기본 스타일시트 임포트 -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main_style.css">
+    <!-- 컴포넌트 스타일시트 -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/components.css">
+    <!-- 유틸리티 스타일시트 -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/utilities.css">
     <!-- 아카이브 스타일시트 -->
 	<%--     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/archive_style.css"> --%>
     <!-- Font Awesome -->
@@ -18,7 +22,7 @@
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <a href="${pageContext.request.contextPath}/dashboard" class="logo-icon" style="display: flex; align-items: center;">
+                <a href="${pageContext.request.contextPath}/dashboard" class="logo-icon d-flex align-items-center">
 			        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
 			            <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" fill="#333333" opacity="0.9"/>
 			        </svg>

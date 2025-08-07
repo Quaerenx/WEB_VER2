@@ -478,12 +478,12 @@ function previewContent() {
     document.getElementById('preview-content').textContent = content;
     
     // 모달 표시
-    document.getElementById('previewModal').style.display = 'block';
+    document.getElementById('previewModal').classList.add('show');
 }
 
 // 미리보기 닫기
 function closePreview() {
-    document.getElementById('previewModal').style.display = 'none';
+    document.getElementById('previewModal').classList.remove('show');
 }
 
 // 회의 유형 라벨 변환

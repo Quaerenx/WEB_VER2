@@ -12,11 +12,11 @@
 <body>
     <div class="container">
         <div class="login-card">
-        <div class="logo" style="display: flex; align-items: center; justify-content: center;">
+        <div class="logo d-flex align-items-center justify-content-center">
     <div class="logo-text">WorkSpace</div>
 </div>
 
-            <h1 style="text-align: center;">로그인</h1>
+            <h1 class="text-center">로그인</h1>
             <!-- <p class="subtitle">사내 시스템에 액세스하려면 로그인하세요.</p> -->
             
             <% if(request.getAttribute("errorMessage") != null) { %>

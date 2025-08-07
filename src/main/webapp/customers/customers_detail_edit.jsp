@@ -569,7 +569,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="detail-item full-width" style="margin-top: 1rem;">
+                <div class="detail-item full-width mt-4">
                     <span class="detail-label">백업비고</span>
                     <div class="detail-value">
                         <textarea class="form-control" name="backupNote" placeholder="백업 관련 상세 정보를 입력하세요">${not empty customerDetail.backupNote ? customerDetail.backupNote : customer.backupConfig}</textarea>
@@ -800,7 +800,7 @@
                    
                     
                 </div>
-                <div class="detail-item full-width" style="margin-top: 1rem;">
+                <div class="detail-item full-width mt-4">
                     <span class="detail-label">비고</span>
                     <div class="detail-value">
                         <textarea class="form-control note-textarea" name="note" placeholder="기타 참고사항을 입력하세요">${not empty customerDetail.note ? customerDetail.note : customer.note}</textarea>

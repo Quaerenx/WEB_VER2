@@ -297,7 +297,7 @@
                                 </a>
                             </td>
                             <td>${ts.customerName}</td>
-                            <td style="text-align: center;">
+                            <td class="text-center">
                                 <c:choose>
                                     <c:when test="${not empty ts.occurrenceDate}">
                                         <fmt:formatDate value="${ts.occurrenceDate}" pattern="yyyy-MM-dd" />
@@ -305,8 +305,8 @@
                                     <c:otherwise>-</c:otherwise>
                                 </c:choose>
                             </td>
-                            <td style="text-align: center;">${ts.creator}</td>
-                            <td style="text-align: center;">
+                            <td class="text-center">${ts.creator}</td>
+                            <td class="text-center">
                                 <fmt:formatDate value="${ts.createDate}" pattern="yyyy-MM-dd" />
                             </td>
                         </tr>

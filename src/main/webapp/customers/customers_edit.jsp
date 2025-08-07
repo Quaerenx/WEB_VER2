@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <label for="customer_name_display">고객사명</label>
                         <input type="text" id="customer_name_display" value="${customer.customerName}" readonly 
-                               style="background-color: #f8f9fa; color: #6c757d;">
+                               class="bg-light text-muted">
                         <small class="form-text">고객사명은 수정할 수 없습니다.</small>
                     </div>
                     <div class="form-group">

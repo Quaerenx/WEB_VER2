@@ -5,11 +5,9 @@
 <c:set var="pageTitle" value="대시보드" scope="request" />
 <%@ include file="/includes/header.jsp" %>
 
+<!-- 대시보드 전용 스타일 -->
 <style>
-
-
 .main-content {
-    /* 또는 고정 높이로 */
     min-height: 1000px;
 }
 
@@ -28,43 +26,6 @@
         box-shadow: 0 0 10px rgba(55, 65, 81, 0.8), 0 0 20px rgba(55, 65, 81, 0.4);
         transform: translateY(-3px);
     }
-}
-
-.loading-spinner {
-    display: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #e5e7eb;
-    border-top: 2px solid #374151;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 15px auto 0;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.alert {
-    margin-top: 15px;
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    display: none;
-    border: 1px solid;
-}
-
-.alert-success {
-    background: #f3f4f6;
-    border-color: #d1d5db;
-    color: #374151;
-}
-
-.alert-error {
-    background: #fef2f2;
-    border-color: #fecaca;
-    color: #dc2626;
 }
 
 /* 반응형 디자인 */

@@ -90,7 +90,7 @@
                 <div class="form-group">
                     <label>작성자</label>
                     <input type="text" value="${troubleshooting.creator}" readonly 
-                           style="background-color: #f8f9fa; color: #6c757d;">
+                           class="bg-light text-muted">
                 </div>
             </div>
             

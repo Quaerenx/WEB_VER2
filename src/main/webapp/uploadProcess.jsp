@@ -143,7 +143,7 @@ try {
         }
     </style>
 </head>
-<body style="background: #f8f9fa;">
+<body class="bg-light">
     <div class="upload-result">
         <div class="success-icon">🎉</div>
         <h3 class="text-center text-success">업로드 완료!</h3>

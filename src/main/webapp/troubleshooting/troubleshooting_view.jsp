@@ -462,7 +462,7 @@
             </div>
             
             <c:if test="${not empty troubleshooting.updatedDate}">
-                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #e5e7eb; text-align: right; color: #6b7280; font-size: 13px;">
+                <div class="mt-4 pt-3 border-top text-right text-muted" style="font-size: 13px;">
                     최종 수정: <fmt:formatDate value="${troubleshooting.updatedDate}" pattern="yyyy-MM-dd HH:mm" />
                 </div>
             </c:if>

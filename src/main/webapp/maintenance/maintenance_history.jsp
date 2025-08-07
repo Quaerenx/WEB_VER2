@@ -530,7 +530,7 @@
                                    class="btn-edit">
                                     <i class="fas fa-edit"></i> 수정
                                 </a>
-                                <form method="post" style="display: inline;" 
+                                <form method="post" class="d-inline" 
                                       onsubmit="return confirm('정말 삭제하시겠습니까?');">
                                     <input type="hidden" name="action" value="delete">
                                     <input type="hidden" name="maintenance_id" value="${record.maintenanceId}">
