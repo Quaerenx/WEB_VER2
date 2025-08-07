@@ -5,7 +5,9 @@
 <c:set var="pageTitle" value="회의록 수정" scope="request" />
 <%@ include file="/includes/header.jsp" %>
 
-<div class="container">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/pages/meeting.css">
+
+<div class="meeting-page-container">
     <div class="page-header">
         <h2><i class="fas fa-edit"></i> 회의록 수정</h2>
         <p>회의 내용을 수정해주세요.</p>
