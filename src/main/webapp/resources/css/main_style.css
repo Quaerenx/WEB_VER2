@@ -317,13 +317,22 @@ body {
     color: white;
 }
 
-/* 푸터 스타일 */
+/* 푸터 스타일 - 톤다운 (페이지 배경과 자연스럽게) */
 .main-footer {
-    background-color: var(--neutral-800);
-    color: var(--neutral-300);
-    padding: var(--space-24) 0;
+    background: transparent;
+    color: var(--neutral-500);
+    border-top: 1px solid #e8ebf3;
+    padding: var(--space-16) 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
+}
+
+/* 푸터 컨테이너 폭/패딩 (헤더와 동일 톤) */
+.main-footer .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
 }
 
 /* 장식 요소 */

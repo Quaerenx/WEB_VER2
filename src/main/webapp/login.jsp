@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 | 사내 시스템</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/pages/dashboard_box.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login_style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="login-card">
+<body class="dash-centered">
+    <div class="page-wrapper">
+      <div class="page-body">
+        <div class="form-area">
         <div class="logo d-flex align-items-center justify-content-center">
     <div class="logo-text">WorkSpace</div>
 </div>
@@ -47,11 +49,12 @@
                     <!-- <a href="#" style="color: var(--primary); text-decoration: none; font-size: 14px;">비밀번호를 잊으셨나요?</a> -->
                 </p>
             </form>
-            
+
             <div class="footer">
                 <p class="mt-16">&copy; 2025 Company Inc. All rights reserved.</p>
             </div>
         </div>
+      </div>
     </div>
     
     <div class="features">

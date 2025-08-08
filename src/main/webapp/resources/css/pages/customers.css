@@ -91,7 +91,7 @@
 }
 
 .add-button {
-    background: #4f46e5;
+    background: var(--primary);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -106,9 +106,9 @@
 }
 
 .add-button:hover {
-    background: #4338ca;
+    background: #2f4968;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    box-shadow: 0 4px 12px rgba(61, 90, 128, 0.25);
     color: white;
     text-decoration: none;
 }
@@ -226,8 +226,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(61, 90, 128, 0.10);
 }
 
 .required {
@@ -245,7 +245,7 @@
 }
 
 .btn-primary {
-    background: #3b82f6;
+    background: var(--primary);
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -256,7 +256,7 @@
 }
 
 .btn-primary:hover {
-    background: #2563eb;
+    background: #2f4968;
 }
 
 .btn-secondary {
@@ -311,9 +311,9 @@
 }
 
 .filter-btn.active {
-    background: #4f46e5;
+    background: var(--primary);
     color: white;
-    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 2px 4px rgba(61, 90, 128, 0.2);
 }
 
 .filter-btn:hover:not(.active) {
@@ -372,8 +372,8 @@
 
 .search-input:focus {
     outline: none;
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(61, 90, 128, 0.10);
 }
 
 .search-icon {
@@ -426,6 +426,47 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border: 1px solid #e5e7eb;
     overflow: hidden;
+}
+
+/* 가독성 향상 - 테이블 공통 개선 */
+.table-container .customer-table { font-size: 15px !important; }
+.customer-table th,
+.customer-table td { padding: 14px 12px !important; line-height: 1.45 !important; }
+.customer-table thead th { background: #f3f4f6 !important; color: #333 !important; font-weight: 700 !important; border-bottom: 1px solid #e5e7eb !important; text-align: center !important; }
+.customer-table thead th a { color: #333 !important; text-decoration: none !important; display: inline-flex; align-items: center; gap: 6px; justify-content: center; }
+.customer-table thead th a:hover { color: #222 !important; text-decoration: none !important; }
+.customer-table thead th .sort-icon { color: #9aa3b2 !important; }
+.customer-table thead th .sort-icon.active { color: #666 !important; }
+.customer-table tbody tr:nth-child(even) td { background: #fbfcfe !important; }
+.customer-table tbody tr:hover td { background: #f5f7fb !important; }
+/* 숫자 중심 컬럼 정렬: 노드수(5), 라이선스(6) */
+.customer-table tbody td:nth-child(5),
+.customer-table tbody td:nth-child(6) { text-align: right !important; font-variant-numeric: tabular-nums; }
+
+/* 컬럼 폭/정렬 세부 조정 */
+/* 모드(3) 컬럼: 폭 축소 + 중앙정렬 */
+.customer-table th:nth-child(3),
+.customer-table td:nth-child(3) {
+    width: 100px !important;
+    min-width: 100px !important;
+    text-align: center !important;
+}
+
+/* 노드수(5) 컬럼: 폭 축소 */
+.customer-table th:nth-child(5),
+.customer-table td:nth-child(5) {
+    width: 90px !important;
+    min-width: 90px !important;
+}
+
+/* SAID(7) 컬럼: 줄바꿈 금지, 말줄임 처리 유지 */
+.customer-table td:nth-child(7) {
+    white-space: nowrap !important;
+}
+
+/* 담당자 이름(8) 컬럼: 중앙정렬 */
+.customer-table td:nth-child(8) {
+    text-align: center !important;
 }
 
 .table-header {
@@ -493,8 +534,9 @@
 /* 액션 버튼 */
 .action-buttons {
     display: flex;
-    gap: 0.5rem;
+    gap: 6px;
     justify-content: flex-end;
+    flex-wrap: nowrap;
 }
 
 .action-btn {
@@ -510,7 +552,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
+    width: 32px;
     height: 32px;
 }
 
@@ -519,13 +561,25 @@
     color: #374151;
 }
 
+/* 아이콘 크기 고정 */
+.action-btn i { font-size: 16px; line-height: 1; }
+
+/* 작업 컬럼 너비/오버플로우 보정 */
+.customer-table th:last-child,
+.customer-table td:last-child {
+    width: 132px !important;
+    min-width: 132px !important;
+    text-align: center !important;
+    overflow: visible !important;
+}
+
 .action-btn.primary {
-    color: #3b82f6;
+    color: var(--primary);
 }
 
 .action-btn.primary:hover {
-    background: #eff6ff;
-    color: #1d4ed8;
+    background: #eef2f7;
+    color: #2f4968;
 }
 
 .action-btn.success {

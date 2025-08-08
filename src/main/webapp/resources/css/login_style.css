@@ -46,54 +46,17 @@
     padding: 0;
 }
 
-body {
-    font-family: var(--font-base);
-    background-color: var(--background);
-    color: var(--neutral-800);
-    line-height: 1.5;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--space-16);
-}
+/* 대시보드 박스 레이아웃을 쓰므로 body 스타일은 dashboard_box.css의 .dash-centered로 대체 */
 
-.container {
-    width: 100%;
-    max-width: 1200px;
+/* 컨테이너 대신 .page-wrapper/.page-body를 사용 */
+
+.form-area {
+    max-width: 520px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-32);
-}
-
-.login-card {
-    grid-column: 5 / 9;
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
-    padding: var(--space-40);
-    width: 100%;
-    transition: box-shadow 0.2s ease;
-}
-
-@media (max-width: 992px) {
-    .login-card {
-        grid-column: 4 / 10;
-    }
-}
-
-@media (max-width: 768px) {
-    .login-card {
-        grid-column: 3 / 11;
-    }
 }
 
 @media (max-width: 576px) {
-    .login-card {
-        grid-column: 1 / 13;
-        padding: var(--space-24);
-    }
+    .form-area { padding: 0 var(--space-8); }
 }
 
 .logo {

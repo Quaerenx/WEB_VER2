@@ -2,9 +2,22 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <c:set var="pageTitle" value="고객사 정보" scope="request" />
-<%@ include file="/includes/header.jsp" %>
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/pages/customers.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${pageTitle}</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main_style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/components.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/utilities.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/pages/customers.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/pages/dashboard_box.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="page-1050">
+<%@ include file="/includes/header.jsp" %>
 
 <div class="customer-management">
     <div class="page-header">
@@ -215,8 +228,11 @@
             </div>
         </div>
     </div>
-</div>
+  </div>
 
+<%@ include file="/includes/footer.jsp" %>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     // 전역 변수
     var currentFilter = "${filter}";
@@ -361,4 +377,5 @@
     }
 </script>
 
-<%@ include file="/includes/footer.jsp" %>
+</body>
+</html>

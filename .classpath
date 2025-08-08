@@ -11,8 +11,16 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="E:/JSP/PROJECT2025/frog/src/main/webapp/WEB-INF/lib/commons-codec-1.15.jar"/>
 	<classpathentry kind="lib" path="E:/JSP/PROJECT2025/frog/src/main/webapp/WEB-INF/lib/commons-collections4-4.4.jar"/>
 	<classpathentry kind="lib" path="E:/JSP/PROJECT2025/frog/src/main/webapp/WEB-INF/lib/commons-compress-1.21.jar"/>

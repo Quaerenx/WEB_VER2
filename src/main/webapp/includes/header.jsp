@@ -20,6 +20,7 @@
 </head>
 <body>
     <header class="main-header">
+        <div class="header-box">
         <div class="container">
             <div class="logo">
                 <a href="${pageContext.request.contextPath}/dashboard" class="logo-icon d-flex align-items-center">
@@ -99,6 +100,7 @@
                     </li>
                 </ul>	
             </nav>
+        </div>
         </div>
     </header>
     

@@ -16,26 +16,26 @@
     
     <!-- 고객사 페이지 전용 스타일 -->
     <style>
-    /* 전체 페이지 배경 */
+    /* 전체 페이지 배경 - 색 대비 강화 */
     body {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: #f5f6fa;
         min-height: 100vh;
         margin: 0;
         padding: 0;
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
-    /* 전체 콘텐츠를 감싸는 컨테이너 */
+    /* 전체 콘텐츠를 감싸는 컨테이너 - 깊이감 부여 */
     .page-container {
         width: 1100px;
-        margin: 0px auto;
+        margin: 20px auto;
         max-width: 1100px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border-radius: 8px;
         overflow: hidden;
         position: relative;
-        min-height: calc(100vh - 60px);
+        min-height: calc(100vh - 40px);
     }
 
     /* 배경 패턴 */
@@ -176,7 +176,7 @@
         padding: 0;
     }
 
-    /* 페이지 헤더 */
+    /* 페이지 헤더 - 영역 구획 명확화 */
     .page-header {
         background-color: #FFFFFF;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
@@ -186,6 +186,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 2px solid #f0f0f0;
     }
 
     .page-header h1 {
@@ -206,18 +207,20 @@
         font-size: 16px;
     }
 
+    /* CTA 버튼 - 시선 흐름 유도 */
     .add-button {
         background: linear-gradient(135deg, #3D5A80 0%, #667eea 100%);
         color: white;
-        padding: 12px 24px;
+        padding: 15px 30px;
         border: none;
-        border-radius: 6px;
+        border-radius: 8px;
         text-decoration: none;
-        font-weight: 500;
+        font-weight: 600;
         transition: all 0.3s ease;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
+        box-shadow: 0 4px 12px rgba(61, 90, 128, 0.2);
     }
 
     .add-button:hover {
@@ -249,16 +252,17 @@
         color: #721c24;
     }
 
-    /* 필터 섹션 */
+    /* 필터 섹션 - 영역 구획 명확화 */
     .filter-section {
         background: #FFFFFF;
         border-radius: 8px;
         padding: 25px;
         margin-bottom: 20px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid #f0f0f0;
     }
 
     .filter-toggle {
@@ -267,27 +271,30 @@
     }
 
     .filter-btn {
-        padding: 10px 20px;
+        padding: 12px 24px;
         border: 2px solid #E9E9E9;
         background: #FFFFFF;
         color: #666666;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
         transition: all 0.3s ease;
         display: flex;
         align-items: center;
         gap: 8px;
+        font-weight: 500;
     }
 
     .filter-btn:hover {
         border-color: #3D5A80;
         color: #3D5A80;
+        transform: translateY(-1px);
     }
 
     .filter-btn.active {
         background: #3D5A80;
         border-color: #3D5A80;
         color: white;
+        box-shadow: 0 2px 8px rgba(61, 90, 128, 0.2);
     }
 
     .filter-info {
@@ -298,13 +305,13 @@
         font-size: 14px;
     }
 
-    /* 검색 섹션 */
+    /* 검색 섹션 - 보조 기능 구분 */
     .search-section {
         background: #FFFFFF;
         border-radius: 8px;
         padding: 25px;
         margin-bottom: 20px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     .search-container {
@@ -333,7 +340,7 @@
         width: 100%;
         padding: 12px 45px 12px 45px;
         border: 2px solid #E9E9E9;
-        border-radius: 6px;
+        border-radius: 8px;
         font-size: 14px;
         transition: all 0.3s ease;
         background: #FFFFFF;
@@ -372,11 +379,11 @@
         font-size: 14px;
     }
 
-    /* 테이블 컨테이너 */
+    /* 테이블 컨테이너 - 정보 목록의 시각적 정렬 강화 */
     .table-container {
         background: #FFFFFF;
         border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         overflow: hidden;
     }
 
@@ -390,17 +397,19 @@
         font-size: 14px;
     }
 
+    /* 컬럼 헤더 배경색과 하단 border */
     .customer-table thead {
         background: #f8f9fa;
         border-bottom: 2px solid #E9E9E9;
     }
 
     .customer-table th {
-        padding: 16px 12px;
+        padding: 18px 12px;
         text-align: left;
         font-weight: 600;
         color: #191919;
         white-space: nowrap;
+        background: #f8f9fa;
     }
 
     .customer-table th a {
@@ -458,7 +467,7 @@
         width: 32px;
         height: 32px;
         border: none;
-        border-radius: 4px;
+        border-radius: 6px;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -476,6 +485,7 @@
     .detail-btn:hover {
         background: #bbdefb;
         color: #1565c0;
+        transform: translateY(-1px);
     }
 
     .edit-btn {
@@ -486,6 +496,7 @@
     .edit-btn:hover {
         background: #ffe0b2;
         color: #ef6c00;
+        transform: translateY(-1px);
     }
 
     .delete-btn {
@@ -496,24 +507,25 @@
     .delete-btn:hover {
         background: #ffcdd2;
         color: #c62828;
+        transform: translateY(-1px);
     }
 
-    /* 빈 상태 */
+    /* 빈 상태 - 톤다운 처리 */
     .empty-state, .no-results {
         text-align: center;
         padding: 60px 40px;
-        color: #666666;
+        color: #999999;
     }
 
     .empty-state i, .no-results i {
         font-size: 48px;
         margin-bottom: 16px;
-        color: #ccc;
+        color: #ddd;
     }
 
     .no-results h3 {
         margin: 16px 0 8px 0;
-        color: #191919;
+        color: #666666;
     }
 
     /* 숨김 처리 */
