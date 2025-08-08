@@ -18,8 +18,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/pages/dashboard_box.css">
 </head>
-<body class="dash-centered">
-  <div class="page-wrapper">
+<body class="page-1050">
+  <%@ include file="/includes/header.jsp" %>
+
     <div class="page-body">
       <div class="greeting-bar">
         <div class="greeting-text">안녕하세요, ${user.userName}님</div>
@@ -47,7 +48,9 @@
         </c:forEach>
       </div>
     </div>
-  </div>
+
+  <%@ include file="/includes/footer.jsp" %>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
